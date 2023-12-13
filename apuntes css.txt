@@ -1,0 +1,72 @@
+______ como centrar un div con flex box?
+
+usar: display:flex y justify-content: center
+
+
+______ como eliminar los margenes?
+usar: margin:0%
+
+
+______como hacer que un div este debajo de otro?
+usar:display: inline-block
+
+
+______como opacar el color en css?
+
+usar : opacity va de 0.1 a 1
+______como opacar solo el color?
+*primero necesitas cambiar el color a formato rgb + la letra a rgba(255,127,80 +40%) +40%
+
+
+_____________________________________________________________CSS GRID__________________________________________________________________________
+
+______como empezar a usar grid css ?
+
+al contenedor padre dar el valor de display:grid
+
+______como definir columnas con css grid ?
+ usar: grid-template-columns: 1fr 1fr 1fr; ⬜⬜⬜
+
+______como definir filas con css grid?
+usar grid-template-rows: 1fr 1fr ⬜
+                                 ⬜
+
+__E___
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr:
+}
+
+E_Resultado:
+ ⬜⬜⬜
+ ⬜⬜⬜
+
+______Que significa fr ?
+fr significa fragmento, 1 fr es igual a 100%
+
+_____como simplificar fr ?
+
+usar repeat + parentesis + cantidad de veces + que se repite + cierre de parentesis
+repeat(3,1fr)
+
+_______como indicar el tamano de las filas que se generan automaticamente?
+
+usar grid-auto-rows:??px;
+
+_______como agregar un valor minimo y maximo a una columna y fila?
+
+usar funcion minmax(100px,1f) 100px es para el tamano minimo y 1f es para el tamano maximo
+
+_______como dar espacio entre cada columna con  css grid ?
+
+usando grid-column-gap:??px
+
+_______como dar espacio entre cada fila con css grid?
+
+usando grid-row-gap: ??px
+
+______como dar espacio entre cada fila y columna con css grid ?
+
+usando gap:??px
