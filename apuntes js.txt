@@ -1,1 +1,94 @@
+//apuntes js 
 
+_____________________________________________________OBJETOS JS________________________________________________________
+
+1.Que son objetos en javascript?
+
+Los objetos en JavaScript son colecciones dinámicas de pares clave-valor. La clave es siempre una cadena y debe ser 
+única en la colección. El valor puede ser una primitiva, un objeto o incluso una función.
+
+Un objeto en JavaScript es una entidad independiente que tiene propiedades y métodos.
+
+Puedes comparar los objetos en JavaScript con objetos tangibles de la vida real. Por ejemplo, imagina una taza: tiene
+un color, un diseño, un peso y está hecha de cierto material. Del mismo modo, los objetos en JavaScript pueden tener
+propiedades que definen sus características.  
+
+ejemplo 1 de objetos:
+const miCoche = {
+  marca: "Ford",
+  modelo: "Mustang",
+  año: 1969
+};
+
+ejemplo 2 de objetos:
+var miCoche = new Object();
+miCoche.marca = "Ford";
+miCoche.modelo = "Mustang";
+miCoche.año = 1969;
+
+ejemplo 3 de objetos:
+const ruben={
+    nombre:"ruben",
+    apellido:"arismendi",
+    edad:18;
+    pasatiempos:["videojuegos","cocinar","jugar futbol","programar"] //console.log(ruben.pasatiempos[1])
+soltero: true;                                                       //videojuegos
+    contacto{
+        email:rubenaugustoarismendi@gmail.com,
+        instagram:ruben.arismnendi // console.log(ruben.contacto.email)
+        movil:0414-39394948587     // rubenaugustoarismendi@gmail.com
+    },
+    saludar:funtion(){        //ruben.saludar()
+        console.log("holoa")
+    },
+
+    decirMiNombre: funtion(){
+        console.log("hola me  llamo ${this.nombre} ${this.apellido}") //usar propiedad this para acceder a 
+                                                                     //las misma propiedades dentro del objeto 
+    }
+}
+////////dentro de un objeto a las variables se le van a llamar atributos y a las funciones
+\\\\\\\\se les llama metodo 
+//accediendo aj ejemplo 3 //
+forma 1 : console.log(rben{nombre}) //no tan usada 
+forma 2 : console.log(ruben.nombre) //notacion menos usada 
+
+
+2.como acceder a los objetos  y propiedades en js 
+Acceso a propiedades:
+Puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la notación de corchetes [].
+Las propiedades no asignadas de un objeto son undefined.
+Por ejemplo:
+JavaScript
+console.log(miCoche.color); // undefined
+
+reglas:
+
+1. es importante usar const poruqe se puede cambiar pero tambien se puede usar let
+
+____________________________________________________includes JS________________________________________________________
+
+1. que es el metodo includes()?|
+
+El método includes() determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda.
+
+includes retorna un booleano dependiedo si encuentra el valor o no (no funciona con interntet explorer)
+
+ejemplo 1:
+
+const nombres = [
+
+    "marcos",
+    "jorge",
+    "luis",
+    "rodrigo",
+    "gaston",
+    "marcos",
+    "felipe"
+]
+
+console.log (nombres.includes("marcos")) \\tue 
+
+como saber si lo contiene  mas de una sola ves ?
+
+console.log (nombres.includes("marcos", 3)) // para saber si apartir del indice 3 contiene marcos // true
