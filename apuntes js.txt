@@ -92,3 +92,249 @@ console.log (nombres.includes("marcos")) \\tue
 como saber si lo contiene  mas de una sola ves ?
 
 console.log (nombres.includes("marcos", 3)) // para saber si apartir del indice 3 contiene marcos // true
+
+
+____________________________________________WHILE BUCLE________________________________________________________________
+
+1.Que es un bucle while ?
+
+Un bucle while de javascript es una estructura de control que permite repetir la ejecución de un bloque de código
+mientras se cumpla una condición específica. 
+
+mientra el codigo a repetir sigua siendo true se seguira ejecuntnado el codigo  
+
+2. Sintaxis de un blucle while:
+
+while (condición) {
+  // código a repetir
+}
+
+ejemplo 1:
+
+let i = 0;
+while(i< 3){  // mostara 0,1,2
+    alert(i);
+    i++
+}
+
+
+ejemplo 2:
+
+let i = 3;
+while(i){  // cuando i es 0, la condición es false, y se para el blucle
+    alert(i);
+    i--;
+}
+
+____________________________________________ DO WHILE BUCLE________________________________________________________________
+
+1.Que es un bucle do while?
+
+Un bucle do while de javascript es una estructura de control que permite ejecutar un bloque de código al menos una vez,
+y luego repetirlo mientras se cumpla una condición específica.
+
+La (condición )es una expresión booleana que se evalúa después de cada iteración. Si la condición es verdadera, el
+bloque de código se vuelve a ejecutar; de lo contrario, el bucle se detiene y se continúa con la ejecución del resto del programa.
+
+2.Sintaxis de un bucle do while:
+
+do {
+  // código a ejecutar
+} while (condición);
+
+ejemplo 1: 
+
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 3);
+
+ejemplo 2 :
+
+____________________________________________SWITCH CASE JavaScript________________________________________________________________
+
+Un switch case de javascript es una estructura de control que permite ejecutar diferentes bloques de código según el valor de una expresión.
+La sintaxis básica de un switch case es la siguiente:
+
+switch (expresion) {
+  case valor1:
+    // código para el caso valor1
+    break;
+  case valor2:
+    // código para el caso valor2
+    break;
+  ...
+  default:
+    // código para el caso por defecto
+    break;
+}
+La expresión es un valor o una variable que se compara con los casos usando la igualdad estricta (===). Si la expresión coincide con alguno de
+los casos, se ejecuta el código correspondiente hasta encontrar una instrucción break, que termina el switch. Si no hay coincidencia
+,se ejecuta el código del caso default, si existe.
+
+Por ejemplo, el siguiente switch case muestra un mensaje diferente según el día de la semana:
+
+let dia = "lunes";
+switch (dia) {
+  case "lunes":
+    console.log("Hoy es lunes");
+    break;
+  case "martes":
+    console.log("Hoy es martes");
+    break;
+  case "miércoles":
+    console.log("Hoy es miércoles");
+    break;
+  case "jueves":
+    console.log("Hoy es jueves");
+    break;
+  case "viernes":
+    console.log("Hoy es viernes");
+    break;
+  case "sábado":
+    console.log("Hoy es sábado");
+    break;
+  case "domingo":
+    console.log("Hoy es domingo");
+    break;
+  default:
+    console.log("No es un día válido");
+    break;
+}
+____________________________________________METODO append()________________________________________________________________
+
+1.Que es el metodo append en js ?
+El método .append en JavaScript se usa para insertar contenido al final de los elementos seleccionados LA DIFERENCIA ENTRE
+APPEND Y APPENDCHILD ES QUE NOS PERMITE AGREGAR UNO O MAS ELEMENTOS SEPARADOS POR UNA COMA (,)
+
+sintaxis:
+
+elemento padre + .append+ ("contenido a agegar")
+
+ejemplo 1 : 
+
+let div = document.getElementById("container");
+div.append("Hola");
+
+//resultaddo 
+
+<div id="container">
+  Hola
+</div>
+____________________________________________METODO appendChild________________________________________________________________
+
+1.QUE es el metodo appendChild ?
+
+
+El método appendChild en JavaScript permite añadir un nodo al final de la lista de nodos hijos de un nodo padre especificado.
+Si el nodo hijo es una referencia a un nodo existente en el documento, se mueve de su posición actual a la nueva posición.
+El método appendChild devuelve el nodo hijo añadido
+
+ejemplo de uso :
+
+// Crear un nuevo elemento párrafo
+var p = document.createElement("p");
+// Añadir un texto al párrafo
+p.textContent = "Este es un párrafo";
+// Seleccionar el elemento body
+var body = document.body;
+// Añadir el párrafo al body
+body.appendChild(p);
+____________________________________________PROPIEDAD firstChild________________________________________________________________
+
+1.Que es la propiedad firstchild?
+La propiedad .firstchild en JavaScript se usa para obtener el primer nodo hijo de un nodo.
+ El nodo hijo puede ser de tipo texto, comentario o elemento
+!!!!!!!!!111111PENDIENTE
+
+____________________________________________METODO addEventListener________________________________________________________________
+
+1.QUE es el metodo addEventListener en js ? 
+El método addEventListener en JavaScript permite registrar un evento a un objeto específico, como un elemento, un documento,
+una ventana o una solicitud. Cuando el evento ocurre, se ejecuta una función asociada al evento.
+
+sintaxis:
+     
+elemento a escuchar + .addEventListener +("tipo de evento a escuchar",funcion que va a hacer al accionar el evento)
+
+ // Seleccionar un botón por su id
+const boton = document.getElementById("boton");
+
+// Definir una función que se ejecuta al hacer clic en el botón
+function saludar() {
+  alert("Hola");
+}
+
+// Añadir un listener para el evento "click" al botón
+boton.addEventListener("click", saludar);
+____________________________________________METODO filter________________________________________________________________
+
+1. Que es el metodo filter en js ?
+
+El método filter en JavaScript permite crear un nuevo arreglo con los elementos que cumplen una condición dada
+por una función. No modifica el arreglo original. La función que se pasa como argumento al método filter debe
+devolver un valor booleano (true o false) para cada elemento
+
+ejemplo de uso : 
+// Definir un arreglo de números
+const numeros = [1, 2, 3, 4, 5, 6];
+
+// Definir una función que verifica si un número es par
+function esPar(numero) {
+  return numero % 2 === 0;
+}
+
+// Crear un nuevo arreglo con los números pares usando filter
+const pares = numeros.filter(esPar);
+
+// Mostrar el resultado
+console.log(pares); // [2, 4, 6]
+
+____________________________________________METODO preventDefault________________________________________________________________
+
+1. que es el metodo preventDefault ? 
+El método preventDefault en JavaScript permite cancelar el evento si es cancelable, lo que significa que la acción por defecto que
+pertenece al evento no ocurrirá. Por ejemplo, esto puede ser útil cuando:
+
+Haces clic en un botón de “Enviar”, evitas que envíe un formulario
+Haces clic en un enlace, evitas que el enlace siga la URL
+
+ejemplo de uso:
+// Seleccionar un enlace por su id
+const enlace = document.getElementById("enlace");
+
+// Definir una función que se ejecuta al hacer clic en el enlace
+function detener(evento) {
+  // Cancelar el evento
+  evento.preventDefault();
+  // Mostrar un mensaje
+  alert("El enlace no funciona");
+}
+
+// Añadir un listener para el evento "click" al enlace
+enlace.addEventListener("click", detener);
+
+____________________________________________operador [...] operador de propagacion________________________________________________________________
+
+
+1.Que es el operador de propagacion?
+
+El operador [...] en JavaScript se llama operador de propagación o spread operator. Permite expandir un arreglo, un objeto o una cadena en una
+lista de elementos.
+
+ejemplo de uso:
+ // Usar el operador de propagación para copiar un arreglo
+const frutas = ["manzana", "naranja", "banana"];
+const copia = [...frutas];
+console.log(copia); // ["manzana", "naranja", "banana"]
+
+// Usar el operador de propagación para combinar dos arreglos
+const verduras = ["zanahoria", "lechuga", "tomate"];
+const comida = [...frutas, ...verduras];
+console.log(comida); // ["manzana", "naranja", "banana", "zanahoria", "lechuga", "tomate"]
+
+// Usar el operador de propagación para convertir una cadena en un arreglo de caracteres
+const saludo = "hola";
+const letras = [...saludo];
+console.log(letras); // ["h", "o", "l", "a"]
